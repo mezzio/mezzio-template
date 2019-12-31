@@ -1,13 +1,12 @@
 <?php
+
 /**
- * Zend Framework (http://framework.zend.com/)
- *
- * @see       https://github.com/zendframework/zend-expressive for the canonical source repository
- * @copyright Copyright (c) 2015 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   https://github.com/zendframework/zend-expressive/blob/master/LICENSE.md New BSD License
+ * @see       https://github.com/mezzio/mezzio-template for the canonical source repository
+ * @copyright https://github.com/mezzio/mezzio-template/blob/master/COPYRIGHT.md
+ * @license   https://github.com/mezzio/mezzio-template/blob/master/LICENSE.md New BSD License
  */
 
-namespace Zend\Expressive\Template;
+namespace Mezzio\Template;
 
 use Traversable;
 
@@ -20,9 +19,9 @@ trait ArrayParametersTrait
      *
      * - null values result in an empty array
      * - array values are returned verbatim
-     * - zend-view view models return the result of getVariables()
+     * - laminas-view view models return the result of getVariables()
      * - Traversables are cast using iterator_to_array
-     * - objects that are not zend-view view models nor traversables are cast
+     * - objects that are not laminas-view view models nor traversables are cast
      *   using PHP's type casting
      * - scalar values result in an exception
      *
@@ -40,8 +39,8 @@ trait ArrayParametersTrait
             return $params;
         }
 
-        // Special case for zendframework/zend-view view models.
-        // Not using typehinting, so as not to require zend-view as a dependency.
+        // Special case for laminas/laminas-view view models.
+        // Not using typehinting, so as not to require laminas-view as a dependency.
         if (is_object($params) && method_exists($params, 'getVariables')) {
             return $params->getVariables();
         }
