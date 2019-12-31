@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Changed
 
-- [#17](https://github.com/zendframework/zend-expressive-template/pull/17)
+- [zendframework/zend-expressive-template#17](https://github.com/zendframework/zend-expressive-template/pull/17)
   updates the component to add return type hints and scalar type hints,
   including nullable types and `void` return types. Notably, this affects the
   `TemplateRendererInterface`, which updates its method signatures to read:
@@ -83,7 +83,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Fixed
 
-- [#10](https://github.com/zendframework/zend-expressive-template/pull/10) fixes
+- [zendframework/zend-expressive-template#10](https://github.com/zendframework/zend-expressive-template/pull/10) fixes
   the logic for merging default parameters with those passed when rendering in
   `DefaultParamsTrait::mergeParams()` to correctly replace values when duplicate
   entries are found.
@@ -104,9 +104,9 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Fixed
 
-- [#5](https://github.com/zendframework/zend-expressive-template/pull/5)
-  actually removes zend-stdlib from the dependency list, which was intended with
-  [#4](https://github.com/zendframework/zend-expressive-template/pull/4).
+- [zendframework/zend-expressive-template#5](https://github.com/zendframework/zend-expressive-template/pull/5)
+  actually removes laminas-stdlib from the dependency list, which was intended with
+  [zendframework/zend-expressive-template#4](https://github.com/zendframework/zend-expressive-template/pull/4).
 
 ## 1.0.2 - 2016-01-25
 
@@ -120,9 +120,9 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Removed
 
-- [#4](https://github.com/zendframework/zend-expressive-template/pull/4) removes
-  the dependency on zend-stdlib by inlining the `ArrayUtils::merge(`) routine as a
-  private method of `Zend\Expressive\Template\DefaultParamsTrait`.
+- [zendframework/zend-expressive-template#4](https://github.com/zendframework/zend-expressive-template/pull/4) removes
+  the dependency on laminas-stdlib by inlining the `ArrayUtils::merge(`) routine as a
+  private method of `Mezzio\Template\DefaultParamsTrait`.
 
 ### Fixed
 
@@ -132,9 +132,9 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Added
 
-- [#1](https://github.com/zendframework/zend-expressive-template/pull/1) imports
-  the `RenderingException` class from zend-expressive, pushing it into the
-  `Zend\Expressive\Template\Exception` namespace.
+- [zendframework/zend-expressive-template#1](https://github.com/zendframework/zend-expressive-template/pull/1) imports
+  the `RenderingException` class from mezzio, pushing it into the
+  `Mezzio\Template\Exception` namespace.
 
 ### Deprecated
 
@@ -152,5 +152,5 @@ All notable changes to this project will be documented in this file, in reverse 
 
 First stable release.
 
-See the [Expressive CHANGELOG](https://github.com/zendframework/zend-expressive/blob/master/CHANGELOG.md]
+See the [Mezzio CHANGELOG](https://github.com/mezzio/mezzio/blob/master/CHANGELOG.md]
 for a history of changes prior to 1.0.

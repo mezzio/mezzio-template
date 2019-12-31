@@ -1,19 +1,20 @@
 <?php
+
 /**
- * @see       https://github.com/zendframework/zend-expressive-template for the canonical source repository
- * @copyright Copyright (c) 2017 Zend Technologies USA Inc. (https://www.zend.com)
- * @license   https://github.com/zendframework/zend-expressive-template/blob/master/LICENSE.md New BSD License
+ * @see       https://github.com/mezzio/mezzio-template for the canonical source repository
+ * @copyright https://github.com/mezzio/mezzio-template/blob/master/COPYRIGHT.md
+ * @license   https://github.com/mezzio/mezzio-template/blob/master/LICENSE.md New BSD License
  */
 
 declare(strict_types=1);
 
-namespace ZendTest\Expressive\Template;
+namespace MezzioTest\Template;
 
+use Mezzio\Template\Exception\InvalidArgumentException;
+use Mezzio\Template\TemplateRendererInterface;
+use MezzioTest\Template\TestAsset\ArrayParameters;
+use MezzioTest\Template\TestAsset\DefaultParameters;
 use PHPUnit\Framework\TestCase;
-use Zend\Expressive\Template\Exception\InvalidArgumentException;
-use Zend\Expressive\Template\TemplateRendererInterface;
-use ZendTest\Expressive\Template\TestAsset\ArrayParameters;
-use ZendTest\Expressive\Template\TestAsset\DefaultParameters;
 
 class DefaultParamsTraitTest extends TestCase
 {
