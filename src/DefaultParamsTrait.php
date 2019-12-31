@@ -1,13 +1,12 @@
 <?php
+
 /**
- * Zend Framework (http://framework.zend.com/)
- *
- * @see       https://github.com/zendframework/zend-expressive for the canonical source repository
- * @copyright Copyright (c) 2015 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   https://github.com/zendframework/zend-expressive/blob/master/LICENSE.md New BSD License
+ * @see       https://github.com/mezzio/mezzio-template for the canonical source repository
+ * @copyright https://github.com/mezzio/mezzio-template/blob/master/COPYRIGHT.md
+ * @license   https://github.com/mezzio/mezzio-template/blob/master/LICENSE.md New BSD License
  */
 
-namespace Zend\Expressive\Template;
+namespace Mezzio\Template;
 
 /**
  * Trait for providing default template parameters.
@@ -86,7 +85,7 @@ trait DefaultParamsTrait
     /**
      * Merge array values recursively.
      *
-     * Adapted from https://github.com/zendframework/zend-stdlib/commit/26fcc32a358aa08de35625736095cb2fdaced090
+     * Adapted from https://github.com/laminas/laminas-stdlib/commit/26fcc32a358aa08de35625736095cb2fdaced090
      * but removes MergeRemoveKey/MergeReplaceKey functionality, as not
      * relevant to this domain.
      */
