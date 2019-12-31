@@ -1,12 +1,24 @@
 {
-    "name": "zendframework/zend-expressive-template",
-    "description": "Template subcomponent for Expressive",
-    "type": "library",
+    "name": "mezzio/mezzio-template",
+    "description": "Template subcomponent for Mezzio",
     "license": "BSD-3-Clause",
     "keywords": [
-        "expressive",
+        "laminas",
+        "mezzio",
         "template"
     ],
+    "homepage": "https://mezzio.dev",
+    "support": {
+        "docs": "https://docs.mezzio.dev/mezzio-template/",
+        "issues": "https://github.com/mezzio/mezzio-template/issues",
+        "source": "https://github.com/mezzio/mezzio-template",
+        "rss": "https://github.com/mezzio/mezzio-template/releases.atom",
+        "chat": "https://laminas.dev/chat",
+        "forum": "https://discourse.laminas.dev"
+    },
+    "config": {
+        "sort-packages": true
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev",
@@ -14,26 +26,27 @@
         }
     },
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.5",
+        "laminas/laminas-zendframework-bridge": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.7",
-        "zendframework/zend-coding-standard": "~1.0.0"
-    },
-    "autoload": {
-      "psr-4": {
-        "Zend\\Expressive\\Template\\": "src/"
-      }
-    },
-    "autoload-dev": {
-      "psr-4": {
-        "ZendTest\\Expressive\\Template\\": "test/"
-      }
+        "laminas/laminas-coding-standard": "~1.0.0",
+        "phpunit/phpunit": "^4.7"
     },
     "suggest": {
-        "zendframework/zend-expressive-platesrenderer": "^0.1 to use the Plates template renderer",
-        "zendframework/zend-expressive-twigrenderer": "^0.1 to use the Twig template renderer",
-        "zendframework/zend-expressive-zendviewrenderer": "^0.1 to use the zend-view PhpRenderer template renderer"
+        "mezzio/mezzio-laminasviewrenderer": "^0.1 to use the laminas-view PhpRenderer template renderer",
+        "mezzio/mezzio-platesrenderer": "^0.1 to use the Plates template renderer",
+        "mezzio/mezzio-twigrenderer": "^0.1 to use the Twig template renderer"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mezzio\\Template\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MezzioTest\\Template\\": "test/"
+        }
     },
     "scripts": {
         "check": [
@@ -45,5 +58,8 @@
         "cs-fix": "phpcbf",
         "test": "phpunit",
         "test-coverage": "phpunit --coverage-clover clover.xml"
+    },
+    "replace": {
+        "zendframework/zend-expressive-template": "self.version"
     }
 }

@@ -1,8 +1,8 @@
-# zend-expressive-template
+# mezzio-template
 
-[![Build Status](https://secure.travis-ci.org/zendframework/zend-expressive-template.svg?branch=master)](https://secure.travis-ci.org/zendframework/zend-expressive-template)
+[![Build Status](https://travis-ci.org/mezzio/mezzio-template.svg?branch=master)](https://travis-ci.org/mezzio/mezzio-template)
 
-Template subcomponent for [Expressive](https://github.com/zendframework/zend-expressive).
+Template subcomponent for [Mezzio](https://github.com/mezzio/mezzio).
 
 This package provides the following classes, interfaces, and traits:
 
@@ -18,23 +18,23 @@ This package provides the following classes, interfaces, and traits:
 
 ## Installation
 
-Typically, you will install this when installing Expressive. However, it can be
+Typically, you will install this when installing Mezzio. However, it can be
 used standalone to provide a generic way to provide templating to your
 application. To do this, use:
 
 ```bash
-$ composer require zendframework/zend-expressive-template
+$ composer require mezzio/mezzio-template
 ```
 
 We currently support and provide the following routing integrations:
 
 - [Plates](https://github.com/thephpleague/plates):
-  `composer require zendframework/zend-expressive-platesrenderer`
+  `composer require mezzio/mezzio-platesrenderer`
 - [Twig](http://twig.sensiolabs.org/):
-  `composer require zendframework/zend-expressive-twigrenderer`
-- [ZF2 PhpRenderer](https://github.com/zendframework/zend-view):
-  `composer require zendframework/zend-expressive-zendviewrenderer`
+  `composer require mezzio/mezzio-twigrenderer`
+- [Laminas PhpRenderer](https://github.com/laminas/laminas-view):
+  `composer require mezzio/mezzio-laminasviewrenderer`
 
 ## Documentation
 
-Expressive provides [template documentation](https://zendframework.github.io/zend-expressive/features/template/intro/).
+Mezzio provides [template documentation](https://docs.mezzio.dev/mezzio/features/template/intro/).

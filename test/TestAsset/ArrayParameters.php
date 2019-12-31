@@ -1,12 +1,14 @@
 <?php
+
 /**
- * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
- * @copyright Copyright (c) 2015 Zend Technologies USA Inc. (http://www.zend.com)
+ * @see       https://github.com/mezzio/mezzio-template for the canonical source repository
+ * @copyright https://github.com/mezzio/mezzio-template/blob/master/COPYRIGHT.md
+ * @license   https://github.com/mezzio/mezzio-template/blob/master/LICENSE.md New BSD License
  */
 
-namespace ZendTest\Expressive\Template\TestAsset;
+namespace MezzioTest\Template\TestAsset;
 
-use Zend\Expressive\Template\ArrayParametersTrait;
+use Mezzio\Template\ArrayParametersTrait;
 
 class ArrayParameters
 {
