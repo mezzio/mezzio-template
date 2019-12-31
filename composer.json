@@ -1,43 +1,20 @@
 {
-    "name": "zendframework/zend-expressive-template",
-    "description": "Template subcomponent for Expressive",
+    "name": "mezzio/mezzio-template",
+    "description": "Template subcomponent for Mezzio",
     "license": "BSD-3-Clause",
     "keywords": [
-        "expressive",
-        "template",
-        "zf",
-        "zendframework",
-        "zend-expressive"
+        "laminas",
+        "mezzio",
+        "template"
     ],
+    "homepage": "https://mezzio.dev",
     "support": {
-        "issues": "https://github.com/zendframework/zend-expressive-template/issues",
-        "source": "https://github.com/zendframework/zend-expressive-template",
-        "rss": "https://github.com/zendframework/zend-expressive-template/releases.atom",
-        "slack": "https://zendframework-slack.herokuapp.com",
-        "forum": "https://discourse.zendframework.com/c/questions/expressive"
-    },
-    "require": {
-        "php": "^7.1"
-    },
-    "require-dev": {
-        "malukenho/docheader": "^0.1.6",
-        "phpunit/phpunit": "^7.0.2",
-        "zendframework/zend-coding-standard": "~1.0.0"
-    },
-    "suggest": {
-        "zendframework/zend-expressive-platesrenderer": "^2.0 to use the Plates template renderer",
-        "zendframework/zend-expressive-twigrenderer": "^2.0 to use the Twig template renderer",
-        "zendframework/zend-expressive-zendviewrenderer": "^2.0 to use the zend-view PhpRenderer template renderer"
-    },
-    "autoload": {
-        "psr-4": {
-            "Zend\\Expressive\\Template\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "ZendTest\\Expressive\\Template\\": "test/"
-        }
+        "docs": "https://docs.mezzio.dev/mezzio-template/",
+        "issues": "https://github.com/mezzio/mezzio-template/issues",
+        "source": "https://github.com/mezzio/mezzio-template",
+        "rss": "https://github.com/mezzio/mezzio-template/releases.atom",
+        "chat": "https://laminas.dev/chat",
+        "forum": "https://discourse.laminas.dev"
     },
     "config": {
         "sort-packages": true
@@ -46,6 +23,30 @@
         "branch-alias": {
             "dev-master": "2.0.x-dev",
             "dev-develop": "2.1.x-dev"
+        }
+    },
+    "require": {
+        "php": "^7.1",
+        "laminas/laminas-zendframework-bridge": "^1.0"
+    },
+    "require-dev": {
+        "laminas/laminas-coding-standard": "~1.0.0",
+        "malukenho/docheader": "^0.1.6",
+        "phpunit/phpunit": "^7.0.2"
+    },
+    "suggest": {
+        "mezzio/mezzio-laminasviewrenderer": "^2.0 to use the laminas-view PhpRenderer template renderer",
+        "mezzio/mezzio-platesrenderer": "^2.0 to use the Plates template renderer",
+        "mezzio/mezzio-twigrenderer": "^2.0 to use the Twig template renderer"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mezzio\\Template\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MezzioTest\\Template\\": "test/"
         }
     },
     "scripts": {
@@ -59,5 +60,8 @@
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
         "license-check": "docheader check src/ test/"
+    },
+    "replace": {
+        "zendframework/zend-expressive-template": "self.version"
     }
 }
