@@ -6,9 +6,9 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Added
 
-- [#1](https://github.com/zendframework/zend-expressive-template/pull/1) imports
-  the `RenderingException` class from zend-expressive, pushing it into the
-  `Zend\Expressive\Template\Exception` namespace.
+- [zendframework/zend-expressive-template#1](https://github.com/zendframework/zend-expressive-template/pull/1) imports
+  the `RenderingException` class from mezzio, pushing it into the
+  `Mezzio\Template\Exception` namespace.
 
 ### Deprecated
 
@@ -26,5 +26,5 @@ All notable changes to this project will be documented in this file, in reverse 
 
 First stable release.
 
-See the [Expressive CHANGELOG](https://github.com/zendframework/zend-expressive/blob/master/CHANGELOG.md]
+See the [Mezzio CHANGELOG](https://github.com/mezzio/mezzio/blob/master/CHANGELOG.md]
 for a history of changes prior to 1.0.
