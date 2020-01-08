@@ -9,7 +9,7 @@
     ],
     "homepage": "https://mezzio.dev",
     "support": {
-        "docs": "https://docs.mezzio.dev/mezzio-template/",
+        "docs": "https://docs.mezzio.dev/mezzio/features/template/intro/",
         "issues": "https://github.com/mezzio/mezzio-template/issues",
         "source": "https://github.com/mezzio/mezzio-template",
         "rss": "https://github.com/mezzio/mezzio-template/releases.atom",
