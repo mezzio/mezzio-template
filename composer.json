@@ -62,6 +62,6 @@
         "license-check": "docheader check src/ test/"
     },
     "replace": {
-        "zendframework/zend-expressive-template": "self.version"
+        "zendframework/zend-expressive-template": "^2.0.1"
     }
 }
