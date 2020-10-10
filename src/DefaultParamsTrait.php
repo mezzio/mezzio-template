@@ -17,9 +17,7 @@ use function array_replace_recursive;
  */
 trait DefaultParamsTrait
 {
-    /**
-     * @var array
-     */
+    /** @var array */
     private $defaultParams = [];
 
     /**
@@ -39,10 +37,10 @@ trait DefaultParamsTrait
      * @param string $templateName Name of template to which the param applies;
      *     use TEMPLATE_ALL to apply to all templates.
      * @param string $param Param name.
-     * @param mixed $value
+     * @param mixed  $value
      * @throws Exception\InvalidArgumentException
      */
-    public function addDefaultParam(string $templateName, string $param, $value) : void
+    public function addDefaultParam(string $templateName, string $param, $value): void
     {
         if (! $templateName) {
             throw new Exception\InvalidArgumentException('$templateName must be a non-empty string');
@@ -62,9 +60,9 @@ trait DefaultParamsTrait
     /**
      * Returns merged global, template-specific and given params
      */
-    private function mergeParams(string $template, array $params) : array
+    private function mergeParams(string $template, array $params): array
     {
-        $globalDefaults = $this->defaultParams[TemplateRendererInterface::TEMPLATE_ALL] ?? [];
+        $globalDefaults   = $this->defaultParams[TemplateRendererInterface::TEMPLATE_ALL] ?? [];
         $templateDefaults = $this->defaultParams[$template] ?? [];
 
         return array_replace_recursive($globalDefaults, $templateDefaults, $params);

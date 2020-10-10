@@ -28,7 +28,7 @@ interface TemplateRendererInterface
      *
      * @param array|object $params
      */
-    public function render(string $name, $params = []) : string;
+    public function render(string $name, $params = []): string;
 
     /**
      * Add a template path to the engine.
@@ -36,14 +36,14 @@ interface TemplateRendererInterface
      * Adds a template path, with optional namespace the templates in that path
      * provide.
      */
-    public function addPath(string $path, string $namespace = null) : void;
+    public function addPath(string $path, ?string $namespace = null): void;
 
     /**
      * Retrieve configured paths from the engine.
      *
      * @return TemplatePath[]
      */
-    public function getPaths() : array;
+    public function getPaths(): array;
 
     /**
      * Add a default parameter to use with a template.
@@ -62,7 +62,7 @@ interface TemplateRendererInterface
      * @param string $templateName Name of template to which the param applies;
      *     use TEMPLATE_ALL to apply to all templates.
      * @param string $param Param name.
-     * @param mixed $value
+     * @param mixed  $value
      */
-    public function addDefaultParam(string $templateName, string $param, $value) : void;
+    public function addDefaultParam(string $templateName, string $param, $value): void;
 }

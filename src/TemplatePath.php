@@ -12,17 +12,13 @@ namespace Mezzio\Template;
 
 class TemplatePath
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $path;
 
-    /**
-     * @var null|string
-     */
+    /** @var null|string */
     protected $namespace;
 
-    public function __construct(string $path, string $namespace = null)
+    public function __construct(string $path, ?string $namespace = null)
     {
         $this->path      = $path;
         $this->namespace = $namespace;
@@ -31,7 +27,7 @@ class TemplatePath
     /**
      * Casts to string by returning the path only.
      */
-    public function __toString() : string
+    public function __toString(): string
     {
         return $this->path;
     }
@@ -39,7 +35,7 @@ class TemplatePath
     /**
      * Get the namespace
      */
-    public function getNamespace() : ?string
+    public function getNamespace(): ?string
     {
         return $this->namespace;
     }
@@ -47,7 +43,7 @@ class TemplatePath
     /**
      * Get the path
      */
-    public function getPath() : string
+    public function getPath(): string
     {
         return $this->path;
     }

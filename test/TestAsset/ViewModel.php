@@ -19,7 +19,7 @@ class ViewModel
         $this->variables = $variables;
     }
 
-    public function getVariables()
+    public function getVariables(): array
     {
         return $this->variables;
     }

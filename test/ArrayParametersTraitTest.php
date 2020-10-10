@@ -74,8 +74,7 @@ class ArrayParametersTraitTest extends TestCase
 
     /**
      * @dataProvider nonNullScalarParameters
-     *
-     * @param mixed $scalar
+     * @param mixed  $scalar
      * @param string $expectedString
      */
     public function testNonNullScalarsRaiseAnException($scalar, $expectedString)
