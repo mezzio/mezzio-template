@@ -19,7 +19,7 @@ class ArrayParametersTraitTest extends TestCase
     /** @var TestAsset\ArrayParameters */
     private $subject;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->subject = new TestAsset\ArrayParameters();
     }

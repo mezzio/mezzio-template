@@ -28,7 +28,7 @@ class DefaultParamsTraitTest extends TestCase
      */
     private $defaultParams;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->arrayParams   = new ArrayParameters();
         $this->defaultParams = new DefaultParameters();
