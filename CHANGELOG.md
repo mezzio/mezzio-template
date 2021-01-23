@@ -2,27 +2,22 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 2.1.1 - TBD
+## 2.1.1 - 2021-01-23
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [2.1.1](https://github.com/mezzio/mezzio-template/milestone/2)
 
-- Nothing.
+2.1.x bugfix release (patch)
 
-### Deprecated
+### 2.1.1
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **1**
+- Total contributors: **1**
 
-### Removed
-
-- Nothing.
-
-### Fixed
-
-- Nothing.
+ - [6: CS Fix for 2.1.x](https://github.com/mezzio/mezzio-template/pull/6) thanks to @samsonasik
 
 ## 2.0.2 - TBD
 
