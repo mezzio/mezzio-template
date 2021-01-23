@@ -16,7 +16,8 @@ class ArrayParameters
 {
     use ArrayParametersTrait;
 
-    public function normalize($params)
+    /** @param mixed $params */
+    public function normalize($params): array
     {
         return $this->normalizeParams($params);
     }

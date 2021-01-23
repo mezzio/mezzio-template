@@ -18,17 +18,13 @@ use PHPUnit\Framework\TestCase;
 
 class DefaultParamsTraitTest extends TestCase
 {
-    /**
-     * @var ArrayParameters
-     */
+    /** @var ArrayParameters */
     private $arrayParams;
 
-    /**
-     * @var DefaultParameters
-     */
+    /** @var DefaultParameters */
     private $defaultParams;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->arrayParams   = new ArrayParameters();
         $this->defaultParams = new DefaultParameters();

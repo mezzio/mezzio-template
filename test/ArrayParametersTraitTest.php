@@ -19,7 +19,7 @@ class ArrayParametersTraitTest extends TestCase
     /** @var TestAsset\ArrayParameters */
     private $subject;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->subject = new TestAsset\ArrayParameters();
     }
@@ -74,8 +74,7 @@ class ArrayParametersTraitTest extends TestCase
 
     /**
      * @dataProvider nonNullScalarParameters
-     *
-     * @param mixed $scalar
+     * @param mixed  $scalar
      * @param string $expectedString
      */
     public function testNonNullScalarsRaiseAnException($scalar, $expectedString)

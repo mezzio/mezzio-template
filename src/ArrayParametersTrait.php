@@ -12,7 +12,6 @@ namespace Mezzio\Template;
 
 use Traversable;
 
-use function get_class;
 use function gettype;
 use function is_array;
 use function is_object;
@@ -36,9 +35,9 @@ trait ArrayParametersTrait
      * - scalar values result in an exception
      *
      * @param mixed $params
-     * @throws Exception\InvalidArgumentException for non-array, non-object parameters.
+     * @throws Exception\InvalidArgumentException
      */
-    private function normalizeParams($params) : array
+    private function normalizeParams($params): array
     {
         if (null === $params) {
             return [];
@@ -65,7 +64,7 @@ trait ArrayParametersTrait
         throw new Exception\InvalidArgumentException(sprintf(
             '%s template adapter can only handle arrays, Traversables, and objects '
             . 'when rendering; received %s',
-            get_class($this),
+            static::class,
             gettype($params)
         ));
     }

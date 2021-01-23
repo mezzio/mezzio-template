@@ -16,12 +16,13 @@ class DefaultParameters
 {
     use DefaultParamsTrait;
 
-    public function getParameters()
+    public function getParameters(): array
     {
         return $this->defaultParams;
     }
 
-    public function mergeParameters($template, array $params)
+    /** @param mixed $template */
+    public function mergeParameters($template, array $params): array
     {
         return $this->mergeParams($template, $params);
     }

@@ -19,16 +19,14 @@
     "config": {
         "sort-packages": true
     },
-    "extra": {
-    },
     "require": {
-        "php": "^7.1",
+        "php": "^7.3 || ~8.0.0",
         "laminas/laminas-zendframework-bridge": "^1.0"
     },
     "require-dev": {
-        "laminas/laminas-coding-standard": "~1.0.0",
+        "laminas/laminas-coding-standard": "~2.1.0",
         "malukenho/docheader": "^0.1.6",
-        "phpunit/phpunit": "^7.0.2"
+        "phpunit/phpunit": "^9.3"
     },
     "suggest": {
         "mezzio/mezzio-laminasviewrenderer": "^2.0 to use the laminas-view PhpRenderer template renderer",
