@@ -2,24 +2,7 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 2.1.1 - 2021-01-23
-
-
------
-
-### Release Notes for [2.1.1](https://github.com/mezzio/mezzio-template/milestone/2)
-
-2.1.x bugfix release (patch)
-
-### 2.1.1
-
-- Total issues resolved: **0**
-- Total pull requests resolved: **1**
-- Total contributors: **1**
-
- - [6: CS Fix for 2.1.x](https://github.com/mezzio/mezzio-template/pull/6) thanks to @samsonasik
-
-## 2.0.2 - TBD
+## 2.2.0 - TBD
 
 ### Added
 
@@ -40,6 +23,40 @@ All notable changes to this project will be documented in this file, in reverse 
 ### Fixed
 
 - Nothing.
+
+## 2.1.1 - 2021-01-23
+
+
+-----
+
+### Release Notes for [2.1.1](https://github.com/mezzio/mezzio-template/milestone/2)
+
+2.1.x bugfix release (patch)
+
+### 2.1.1
+
+- Total issues resolved: **0**
+- Total pull requests resolved: **1**
+- Total contributors: **1**
+
+ - [6: CS Fix for 2.1.x](https://github.com/mezzio/mezzio-template/pull/6) thanks to @samsonasik
+ 
+## 2.1.0 - 2021-01-23
+
+
+-----
+
+### Release Notes for [2.1.0](https://github.com/mezzio/mezzio-template/milestone/1)
+
+2.1.0 Minor release
+
+### 2.1.0
+
+- Total issues resolved: **0**
+- Total pull requests resolved: **1**
+- Total contributors: **1**
+
+ - [5: Add PHP 8 support for 2.1.0](https://github.com/mezzio/mezzio-template/pull/5) thanks to @geerteltink 
 
 ## 2.0.1 - 2019-06-20
 
