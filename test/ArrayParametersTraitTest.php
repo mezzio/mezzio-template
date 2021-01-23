@@ -56,7 +56,7 @@ class ArrayParametersTraitTest extends TestCase
         $this->assertSame($params, $this->subject->normalize($model));
     }
 
-    public function nonNullScalarParameters()
+    public function nonNullScalarParameters(): array
     {
         // @codingStandardsIgnoreStart
         //                  [scalar,       expected exception string]
