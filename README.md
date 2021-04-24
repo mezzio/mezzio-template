@@ -1,7 +1,6 @@
 # mezzio-template
 
-[![Build Status](https://travis-ci.com/mezzio/mezzio-template.svg?branch=master)](https://travis-ci.com/mezzio/mezzio-template)
-[![Coverage Status](https://coveralls.io/repos/github/mezzio/mezzio-template/badge.svg?branch=master)](https://coveralls.io/github/mezzio/mezzio-template?branch=master)
+[![Build Status](https://github.com/mezzio/mezzio-template/workflows/continuous-integration.yml/badge.svg)](https://github.com/mezzio/mezzio-template/actions/workflows/continuous-integration.yml)
 
 Template subcomponent for [Mezzio](https://github.com/mezzio/mezzio).
 
