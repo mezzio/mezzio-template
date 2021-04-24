@@ -1,6 +1,6 @@
 # mezzio-template
 
-[![Build Status](https://github.com/mezzio/mezzio-template/workflows/continuous-integration.yml/badge.svg)](https://github.com/mezzio/mezzio-template/actions/workflows/continuous-integration.yml)
+[![Build Status](https://github.com/mezzio/mezzio-template/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/mezzio/mezzio-template/actions/workflows/continuous-integration.yml)
 
 Template subcomponent for [Mezzio](https://github.com/mezzio/mezzio).
 
