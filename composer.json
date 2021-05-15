@@ -24,8 +24,7 @@
         "laminas/laminas-zendframework-bridge": "^1.0"
     },
     "require-dev": {
-        "laminas/laminas-coding-standard": "~2.1.0",
-        "malukenho/docheader": "^0.1.6",
+        "laminas/laminas-coding-standard": "~2.2.0",
         "phpunit/phpunit": "^9.3"
     },
     "suggest": {
@@ -45,15 +44,13 @@
     },
     "scripts": {
         "check": [
-            "@license-check",
             "@cs-check",
             "@test"
         ],
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
         "test": "phpunit --colors=always",
-        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
-        "license-check": "docheader check src/ test/"
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
     },
     "replace": {
         "zendframework/zend-expressive-template": "^2.0.1"
