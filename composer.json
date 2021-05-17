@@ -1,27 +1,19 @@
 {
     "name": "mezzio/mezzio-template",
     "description": "Template subcomponent for Mezzio",
-    "license": "BSD-3-Clause",
     "keywords": [
         "laminas",
         "mezzio",
         "template"
     ],
     "homepage": "https://mezzio.dev",
-    "support": {
-        "docs": "https://docs.mezzio.dev/mezzio/features/template/intro/",
-        "issues": "https://github.com/mezzio/mezzio-template/issues",
-        "source": "https://github.com/mezzio/mezzio-template",
-        "rss": "https://github.com/mezzio/mezzio-template/releases.atom",
-        "chat": "https://laminas.dev/chat",
-        "forum": "https://discourse.laminas.dev"
-    },
-    "config": {
-        "sort-packages": true
-    },
+    "license": "BSD-3-Clause",
     "require": {
         "php": "^7.3 || ~8.0.0",
         "laminas/laminas-zendframework-bridge": "^1.0"
+    },
+    "replace": {
+        "zendframework/zend-expressive-template": "^2.0.1"
     },
     "require-dev": {
         "laminas/laminas-coding-standard": "~2.1.0",
@@ -32,6 +24,9 @@
         "mezzio/mezzio-laminasviewrenderer": "^2.0 to use the laminas-view PhpRenderer template renderer",
         "mezzio/mezzio-platesrenderer": "^2.0 to use the Plates template renderer",
         "mezzio/mezzio-twigrenderer": "^2.0 to use the Twig template renderer"
+    },
+    "config": {
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
@@ -51,11 +46,16 @@
         ],
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
+        "license-check": "docheader check src/ test/",
         "test": "phpunit --colors=always",
-        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
-        "license-check": "docheader check src/ test/"
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
     },
-    "replace": {
-        "zendframework/zend-expressive-template": "^2.0.1"
+    "support": {
+        "issues": "https://github.com/mezzio/mezzio-template/issues",
+        "forum": "https://discourse.laminas.dev",
+        "chat": "https://laminas.dev/chat",
+        "source": "https://github.com/mezzio/mezzio-template",
+        "docs": "https://docs.mezzio.dev/mezzio/features/template/intro/",
+        "rss": "https://github.com/mezzio/mezzio-template/releases.atom"
     }
 }
