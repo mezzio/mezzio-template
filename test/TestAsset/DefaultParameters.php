@@ -15,8 +15,7 @@ class DefaultParameters
         return $this->defaultParams;
     }
 
-    /** @param mixed $template */
-    public function mergeParameters($template, array $params): array
+    public function mergeParameters(string $template, array $params): array
     {
         return $this->mergeParams($template, $params);
     }

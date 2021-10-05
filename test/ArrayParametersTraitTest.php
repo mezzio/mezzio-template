@@ -18,38 +18,39 @@ class ArrayParametersTraitTest extends TestCase
         $this->subject = new TestAsset\ArrayParameters();
     }
 
-    public function testNullParamsAreReturnedAsEmptyArray()
+    public function testNullParamsAreReturnedAsEmptyArray(): void
     {
-        $this->assertEquals([], $this->subject->normalize(null));
+        self::assertEquals([], $this->subject->normalize(null));
     }
 
-    public function testArrayParamsAreReturnedVerbatim()
+    public function testArrayParamsAreReturnedVerbatim(): void
     {
         $params = ['foo' => 'bar'];
-        $this->assertSame($params, $this->subject->normalize($params));
+        self::assertSame($params, $this->subject->normalize($params));
     }
 
-    public function testExtractsVariablesFromObjectsImplementingGetVariables()
+    public function testExtractsVariablesFromObjectsImplementingGetVariables(): void
     {
         $params = ['foo' => 'bar'];
         $model  = new TestAsset\ViewModel($params);
-        $this->assertSame($params, $this->subject->normalize($model));
+        self::assertSame($params, $this->subject->normalize($model));
     }
 
-    public function testCastsTraversablesToArrays()
+    public function testCastsTraversablesToArrays(): void
     {
         $params = ['foo' => 'bar'];
         $model  = new ArrayIterator($params);
-        $this->assertSame($params, $this->subject->normalize($model));
+        self::assertSame($params, $this->subject->normalize($model));
     }
 
-    public function testCastsObjectsToArrays()
+    public function testCastsObjectsToArrays(): void
     {
         $params = ['foo' => 'bar'];
         $model  = (object) $params;
-        $this->assertSame($params, $this->subject->normalize($model));
+        self::assertSame($params, $this->subject->normalize($model));
     }
 
+    /** @psalm-return array<string, array{scalar, string}> */
     public function nonNullScalarParameters(): array
     {
         // @codingStandardsIgnoreStart
@@ -71,7 +72,7 @@ class ArrayParametersTraitTest extends TestCase
      * @param mixed  $scalar
      * @param string $expectedString
      */
-    public function testNonNullScalarsRaiseAnException($scalar, $expectedString)
+    public function testNonNullScalarsRaiseAnException($scalar, $expectedString): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage($expectedString);

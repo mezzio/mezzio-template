@@ -9,7 +9,7 @@ class TemplatePath
     /** @var string */
     protected $path;
 
-    /** @var null|string */
+    /** @var string|null */
     protected $namespace;
 
     public function __construct(string $path, ?string $namespace = null)
