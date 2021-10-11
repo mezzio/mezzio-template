@@ -14,21 +14,21 @@ class TemplatePathTest extends TestCase
 {
     use TemplatePathAssertionsTrait;
 
-    public function testCanProvideNamespaceAtInstantiation()
+    public function testCanProvideNamespaceAtInstantiation(): void
     {
         $templatePath = new TemplatePath('/tmp', 'test');
         $this->assertTemplatePath('/tmp', $templatePath);
         $this->assertTemplatePathNamespace('test', $templatePath);
     }
 
-    public function testCanInstantiateWithoutANamespace()
+    public function testCanInstantiateWithoutANamespace(): void
     {
         $templatePath = new TemplatePath('/tmp');
         $this->assertTemplatePath('/tmp', $templatePath);
         $this->assertEmptyTemplatePathNamespace($templatePath);
     }
 
-    public function testCastingToStringReturnsPathOnly()
+    public function testCastingToStringReturnsPathOnly(): void
     {
         $templatePath = new TemplatePath('/tmp');
         $this->assertTemplatePathString('/tmp', $templatePath);

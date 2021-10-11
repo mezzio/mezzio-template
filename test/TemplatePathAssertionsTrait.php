@@ -12,43 +12,46 @@ use function var_export;
 trait TemplatePathAssertionsTrait
 {
     /** @param mixed $path */
-    public function assertTemplatePath($path, TemplatePath $templatePath, ?string $message = null)
+    public function assertTemplatePath($path, TemplatePath $templatePath, ?string $message = null): void
     {
-        $message = $message ?: sprintf('Failed to assert TemplatePath contained path %s', $path);
-        $this->assertEquals($path, $templatePath->getPath(), $message);
+        $message = $message ?: sprintf('Failed to assert TemplatePath contained path %s', (string) $path);
+        self::assertEquals($path, $templatePath->getPath(), $message);
     }
 
     /** @param mixed $path */
-    public function assertTemplatePathString($path, TemplatePath $templatePath, ?string $message = null)
+    public function assertTemplatePathString($path, TemplatePath $templatePath, ?string $message = null): void
     {
-        $message = $message ?: sprintf('Failed to assert TemplatePath casts to string path %s', $path);
-        $this->assertEquals($path, (string) $templatePath, $message);
+        $message = $message ?: sprintf('Failed to assert TemplatePath casts to string path %s', (string) $path);
+        self::assertEquals($path, (string) $templatePath, $message);
     }
 
     /** @param mixed $namespace */
-    public function assertTemplatePathNamespace($namespace, TemplatePath $templatePath, ?string $message = null)
+    public function assertTemplatePathNamespace($namespace, TemplatePath $templatePath, ?string $message = null): void
     {
         $message = $message ?: sprintf(
             'Failed to assert TemplatePath namespace matched %s',
             var_export($namespace, true)
         );
-        $this->assertEquals($namespace, $templatePath->getNamespace(), $message);
+        self::assertEquals($namespace, $templatePath->getNamespace(), $message);
     }
 
-    public function assertEmptyTemplatePathNamespace(TemplatePath $templatePath, ?string $message = null)
+    public function assertEmptyTemplatePathNamespace(TemplatePath $templatePath, ?string $message = null): void
     {
         $message = $message ?: 'Failed to assert TemplatePath namespace was empty';
-        $this->assertEmpty($templatePath->getNamespace(), $message);
+        self::assertEmpty($templatePath->getNamespace(), $message);
     }
 
-    public function assertEqualTemplatePath(TemplatePath $expected, TemplatePath $received, ?string $message = null)
-    {
+    public function assertEqualTemplatePath(
+        TemplatePath $expected,
+        TemplatePath $received,
+        ?string $message = null
+    ): void {
         $message = $message ?: 'Failed to assert TemplatePaths are equal';
         if (
             $expected->getPath() !== $received->getPath()
             || $expected->getNamespace() !== $received->getNamespace()
         ) {
-            $this->fail($message);
+            self::fail($message);
         }
     }
 }

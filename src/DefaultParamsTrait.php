@@ -11,7 +11,7 @@ use function array_replace_recursive;
  */
 trait DefaultParamsTrait
 {
-    /** @var array */
+    /** @var array<string, array<string, mixed>> */
     private $defaultParams = [];
 
     /**

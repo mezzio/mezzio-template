@@ -25,7 +25,9 @@
     },
     "require-dev": {
         "laminas/laminas-coding-standard": "~2.2.0",
-        "phpunit/phpunit": "^9.3"
+        "phpunit/phpunit": "^9.4",
+        "psalm/plugin-phpunit": "^0.16.1",
+        "vimeo/psalm": "^4.8"
     },
     "suggest": {
         "mezzio/mezzio-laminasviewrenderer": "^2.0 to use the laminas-view PhpRenderer template renderer",
@@ -50,6 +52,7 @@
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
         "test": "phpunit --colors=always",
+        "static-analysis": "psalm --shepherd --stats",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
     },
     "replace": {

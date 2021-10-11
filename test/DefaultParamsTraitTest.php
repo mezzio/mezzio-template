@@ -24,7 +24,7 @@ class DefaultParamsTraitTest extends TestCase
         $this->defaultParams = new DefaultParameters();
     }
 
-    public function testDefaultParamArray()
+    public function testDefaultParamArray(): void
     {
         $foo = [
             1 => ['id' => 1],
@@ -39,10 +39,10 @@ class DefaultParamsTraitTest extends TestCase
         ];
 
         $this->defaultParams->addDefaultParam(TemplateRendererInterface::TEMPLATE_ALL, 'foo', $foo);
-        $this->assertEquals($expected, $this->defaultParams->getParameters());
+        self::assertEquals($expected, $this->defaultParams->getParameters());
     }
 
-    public function testMergingParamsWithDefaultParamArray()
+    public function testMergingParamsWithDefaultParamArray(): void
     {
         $foo = [
             1 => ['id' => 1],
@@ -74,17 +74,17 @@ class DefaultParamsTraitTest extends TestCase
         );
         $params = $this->defaultParams->mergeParameters('template', $params);
 
-        $this->assertEquals($expected, $params);
+        self::assertEquals($expected, $params);
     }
 
-    public function testExceptionOnAddDefaultParamWhenEmptyTemplateName()
+    public function testExceptionOnAddDefaultParamWhenEmptyTemplateName(): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('$templateName must be a non-empty string');
         $this->defaultParams->addDefaultParam('', 'name', 'value');
     }
 
-    public function testExceptionOnAddDefaultParamWhenEmptyParamName()
+    public function testExceptionOnAddDefaultParamWhenEmptyParamName(): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('$param must be a non-empty string');

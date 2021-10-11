@@ -16,9 +16,10 @@ use function substr;
 
 class ExceptionTest extends TestCase
 {
+    /** @psalm-return Generator<string, array<int, string>> */
     public function exception(): Generator
     {
-        $namespace = substr(ExceptionInterface::class, 0, strrpos(ExceptionInterface::class, '\\') + 1);
+        $namespace = substr(ExceptionInterface::class, 0, (int) strrpos(ExceptionInterface::class, '\\') + 1);
 
         $exceptions = glob(__DIR__ . '/../src/Exception/*.php');
         foreach ($exceptions as $exception) {
