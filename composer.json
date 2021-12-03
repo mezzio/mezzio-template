@@ -20,8 +20,7 @@
         "sort-packages": true
     },
     "require": {
-        "php": "^7.3 || ~8.0.0 || ~8.1.0",
-        "laminas/laminas-zendframework-bridge": "^1.0"
+        "php": "^7.3 || ~8.0.0 || ~8.1.0"
     },
     "require-dev": {
         "laminas/laminas-coding-standard": "~2.2.0",
@@ -55,7 +54,7 @@
         "static-analysis": "psalm --shepherd --stats",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
     },
-    "replace": {
-        "zendframework/zend-expressive-template": "^2.0.1"
+    "conflict": {
+        "zendframework/zend-expressive-template": "*"
     }
 }
