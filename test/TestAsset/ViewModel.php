@@ -6,8 +6,7 @@ namespace MezzioTest\Template\TestAsset;
 
 class ViewModel
 {
-    /** @var array */
-    private $variables;
+    private array $variables;
 
     public function __construct(array $variables)
     {
