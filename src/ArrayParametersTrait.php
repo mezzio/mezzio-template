@@ -44,7 +44,7 @@ trait ArrayParametersTrait
         // Special case for laminas/laminas-view view models.
         // Not using typehinting, so as not to require laminas-view as a dependency.
         if (is_object($params) && method_exists($params, 'getVariables')) {
-            return $params->getVariables();
+            return $this->normalizeParams($params->getVariables());
         }
 
         if ($params instanceof Traversable) {
