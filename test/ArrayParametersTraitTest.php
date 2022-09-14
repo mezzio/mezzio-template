@@ -6,16 +6,16 @@ namespace MezzioTest\Template;
 
 use ArrayIterator;
 use Mezzio\Template\Exception\InvalidArgumentException;
+use MezzioTest\Template\TestAsset\ArrayParameters;
 use PHPUnit\Framework\TestCase;
 
 class ArrayParametersTraitTest extends TestCase
 {
-    /** @var TestAsset\ArrayParameters */
-    private $subject;
+    private ArrayParameters $subject;
 
     protected function setUp(): void
     {
-        $this->subject = new TestAsset\ArrayParameters();
+        $this->subject = new ArrayParameters();
     }
 
     public function testNullParamsAreReturnedAsEmptyArray(): void

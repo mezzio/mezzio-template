@@ -12,11 +12,9 @@ use PHPUnit\Framework\TestCase;
 
 class DefaultParamsTraitTest extends TestCase
 {
-    /** @var ArrayParameters */
-    private $arrayParams;
+    private ArrayParameters $arrayParams;
 
-    /** @var DefaultParameters */
-    private $defaultParams;
+    private DefaultParameters $defaultParams;
 
     protected function setUp(): void
     {
