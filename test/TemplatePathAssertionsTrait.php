@@ -11,23 +11,23 @@ use function var_export;
 
 trait TemplatePathAssertionsTrait
 {
-    /** @param mixed $path */
-    public function assertTemplatePath($path, TemplatePath $templatePath, ?string $message = null): void
+    public function assertTemplatePath(mixed $path, TemplatePath $templatePath, ?string $message = null): void
     {
         $message = $message ?: sprintf('Failed to assert TemplatePath contained path %s', (string) $path);
         self::assertEquals($path, $templatePath->getPath(), $message);
     }
 
-    /** @param mixed $path */
-    public function assertTemplatePathString($path, TemplatePath $templatePath, ?string $message = null): void
+    public function assertTemplatePathString(mixed $path, TemplatePath $templatePath, ?string $message = null): void
     {
         $message = $message ?: sprintf('Failed to assert TemplatePath casts to string path %s', (string) $path);
         self::assertEquals($path, (string) $templatePath, $message);
     }
 
-    /** @param mixed $namespace */
-    public function assertTemplatePathNamespace($namespace, TemplatePath $templatePath, ?string $message = null): void
-    {
+    public function assertTemplatePathNamespace(
+        mixed $namespace,
+        TemplatePath $templatePath,
+        ?string $message = null
+    ): void {
         $message = $message ?: sprintf(
             'Failed to assert TemplatePath namespace matched %s',
             var_export($namespace, true)

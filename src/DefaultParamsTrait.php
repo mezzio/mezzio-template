@@ -31,10 +31,9 @@ trait DefaultParamsTrait
      * @param string $templateName Name of template to which the param applies;
      *     use TEMPLATE_ALL to apply to all templates.
      * @param string $param Param name.
-     * @param mixed  $value
      * @throws Exception\InvalidArgumentException
      */
-    public function addDefaultParam(string $templateName, string $param, $value): void
+    public function addDefaultParam(string $templateName, string $param, mixed $value): void
     {
         if (! $templateName) {
             throw new Exception\InvalidArgumentException('$templateName must be a non-empty string');

@@ -4,18 +4,12 @@ declare(strict_types=1);
 
 namespace Mezzio\Template;
 
-class TemplatePath
+use Stringable;
+
+class TemplatePath implements Stringable
 {
-    /** @var string */
-    protected $path;
-
-    /** @var string|null */
-    protected $namespace;
-
-    public function __construct(string $path, ?string $namespace = null)
+    public function __construct(protected string $path, protected ?string $namespace = null)
     {
-        $this->path      = $path;
-        $this->namespace = $namespace;
     }
 
     /**

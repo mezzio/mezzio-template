@@ -69,10 +69,9 @@ class ArrayParametersTraitTest extends TestCase
 
     /**
      * @dataProvider nonNullScalarParameters
-     * @param mixed  $scalar
      * @param string $expectedString
      */
-    public function testNonNullScalarsRaiseAnException($scalar, $expectedString): void
+    public function testNonNullScalarsRaiseAnException(mixed $scalar, $expectedString): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage($expectedString);
