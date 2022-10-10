@@ -28,10 +28,9 @@ trait ArrayParametersTrait
      *   using PHP's type casting
      * - scalar values result in an exception
      *
-     * @param mixed $params
      * @throws Exception\InvalidArgumentException
      */
-    private function normalizeParams($params): array
+    private function normalizeParams(mixed $params): array
     {
         if (null === $params) {
             return [];

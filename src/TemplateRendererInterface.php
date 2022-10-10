@@ -56,7 +56,6 @@ interface TemplateRendererInterface
      * @param string $templateName Name of template to which the param applies;
      *     use TEMPLATE_ALL to apply to all templates.
      * @param string $param Param name.
-     * @param mixed  $value
      */
-    public function addDefaultParam(string $templateName, string $param, $value): void;
+    public function addDefaultParam(string $templateName, string $param, mixed $value): void;
 }
