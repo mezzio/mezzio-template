@@ -7,6 +7,7 @@ namespace MezzioTest\Template;
 use ArrayIterator;
 use Mezzio\Template\Exception\InvalidArgumentException;
 use MezzioTest\Template\TestAsset\ArrayParameters;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class ArrayParametersTraitTest extends TestCase
@@ -51,7 +52,7 @@ class ArrayParametersTraitTest extends TestCase
     }
 
     /** @psalm-return array<string, array{scalar, string}> */
-    public function nonNullScalarParameters(): array
+    public static function nonNullScalarParameters(): array
     {
         // @codingStandardsIgnoreStart
         //                  [scalar,       expected exception string]
@@ -67,10 +68,8 @@ class ArrayParametersTraitTest extends TestCase
         // @codingStandardsIgnoreEnd
     }
 
-    /**
-     * @dataProvider nonNullScalarParameters
-     * @param string $expectedString
-     */
+    /** @param string $expectedString */
+    #[DataProvider('nonNullScalarParameters')]
     public function testNonNullScalarsRaiseAnException(mixed $scalar, $expectedString): void
     {
         $this->expectException(InvalidArgumentException::class);

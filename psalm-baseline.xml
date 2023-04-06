@@ -8,6 +8,16 @@
       <code>render</code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="test/ArrayParametersTraitTest.php">
+    <PossiblyUnusedMethod>
+      <code>nonNullScalarParameters</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/ExceptionTest.php">
+    <PossiblyUnusedMethod>
+      <code>exception</code>
+    </PossiblyUnusedMethod>
+  </file>
   <file src="test/TemplatePathAssertionsTrait.php">
     <PossiblyUnusedMethod>
       <code>assertEqualTemplatePath</code>

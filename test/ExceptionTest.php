@@ -7,6 +7,7 @@ namespace MezzioTest\Template;
 use Mezzio\Template\Exception\ExceptionInterface;
 use Mezzio\Template\Exception\InvalidArgumentException;
 use Mezzio\Template\Exception\RenderingException;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 use function is_a;
@@ -22,10 +23,8 @@ class ExceptionTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider exception
-     * @param class-string $exception
-     */
+    /** @param class-string $exception */
+    #[DataProvider('exception')]
     public function testExceptionIsInstanceOfExceptionInterface(string $exception): void
     {
         self::assertStringContainsString('Exception', $exception);
