@@ -1,2 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.27.0@faf106e717c37b8c81721845dba9de3d8deed8ff"/>
+<files psalm-version="5.9.0@8b9ad1eb9e8b7d3101f949291da2b9f7767cd163">
+  <file src="src/TemplateRendererInterface.php">
+    <PossiblyUnusedMethod>
+      <code>addDefaultParam</code>
+      <code>addPath</code>
+      <code>getPaths</code>
+      <code>render</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/ArrayParametersTraitTest.php">
+    <PossiblyUnusedMethod>
+      <code>nonNullScalarParameters</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/ExceptionTest.php">
+    <PossiblyUnusedMethod>
+      <code>exception</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/TemplatePathAssertionsTrait.php">
+    <PossiblyUnusedMethod>
+      <code>assertEqualTemplatePath</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/TestAsset/ViewModel.php">
+    <PossiblyUnusedMethod>
+      <code>getVariables</code>
+    </PossiblyUnusedMethod>
+  </file>
+</files>

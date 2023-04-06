@@ -1,5 +1,3 @@
-/.coveralls.yml export-ignore
-/.docheader export-ignore
 /.gitattributes export-ignore
 /.github/ export-ignore
 /.gitignore export-ignore
@@ -7,3 +5,8 @@
 /phpcs.xml export-ignore
 /phpunit.xml.dist export-ignore
 /test/ export-ignore
+/composer.lock export-ignore
+/.laminas-ci.json export-ignore
+/renovate.json export-ignore
+/psalm.xml export-ignore
+/psalm-baseline.xml export-ignore
