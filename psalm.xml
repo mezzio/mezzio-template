@@ -18,17 +18,16 @@
     </projectFiles>
 
     <issueHandlers>
-        <InternalMethod>
+        <UnusedClass>
             <errorLevel type="suppress">
-                <referencedMethod name="PHPUnit\Framework\MockObject\Builder\InvocationMocker::method"/>
+                <directory name="test/StaticAnalysis" />
             </errorLevel>
+        </UnusedClass>
+        <PossiblyUnusedMethod>
             <errorLevel type="suppress">
-                <referencedMethod name="PHPUnit\Framework\MockObject\Builder\InvocationMocker::willReturn"/>
+                <directory name="test" />
             </errorLevel>
-            <errorLevel type="suppress">
-                <referencedMethod name="PHPUnit\Framework\MockObject\Builder\InvocationMocker::with"/>
-            </errorLevel>
-        </InternalMethod>
+        </PossiblyUnusedMethod>
     </issueHandlers>
 
     <plugins>
