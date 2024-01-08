@@ -52,6 +52,10 @@ trait DefaultParamsTrait
 
     /**
      * Returns merged global, template-specific and given params
+     *
+     * @template TKey of array-key
+     * @param array<TKey, mixed> $params
+     * @return array<TKey, mixed>
      */
     private function mergeParams(string $template, array $params): array
     {

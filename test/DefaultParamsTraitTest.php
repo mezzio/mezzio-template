@@ -68,7 +68,7 @@ class DefaultParamsTraitTest extends TestCase
                     3 => ['id' => 3],
                     4 => ['id' => 4],
                 ],
-            ])
+            ]),
         );
         $params = $this->defaultParams->mergeParameters('template', $params);
 
