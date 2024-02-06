@@ -13,13 +13,13 @@ trait TemplatePathAssertionsTrait
 {
     public function assertTemplatePath(mixed $path, TemplatePath $templatePath, ?string $message = null): void
     {
-        $message = $message ?: sprintf('Failed to assert TemplatePath contained path %s', (string) $path);
+        $message ??= sprintf('Failed to assert TemplatePath contained path %s', (string) $path);
         self::assertEquals($path, $templatePath->getPath(), $message);
     }
 
     public function assertTemplatePathString(mixed $path, TemplatePath $templatePath, ?string $message = null): void
     {
-        $message = $message ?: sprintf('Failed to assert TemplatePath casts to string path %s', (string) $path);
+        $message ??= sprintf('Failed to assert TemplatePath casts to string path %s', (string) $path);
         self::assertEquals($path, (string) $templatePath, $message);
     }
 
@@ -28,7 +28,7 @@ trait TemplatePathAssertionsTrait
         TemplatePath $templatePath,
         ?string $message = null
     ): void {
-        $message = $message ?: sprintf(
+        $message ??= sprintf(
             'Failed to assert TemplatePath namespace matched %s',
             var_export($namespace, true)
         );
@@ -37,7 +37,7 @@ trait TemplatePathAssertionsTrait
 
     public function assertEmptyTemplatePathNamespace(TemplatePath $templatePath, ?string $message = null): void
     {
-        $message = $message ?: 'Failed to assert TemplatePath namespace was empty';
+        $message ??= 'Failed to assert TemplatePath namespace was empty';
         self::assertEmpty($templatePath->getNamespace(), $message);
     }
 
@@ -46,7 +46,7 @@ trait TemplatePathAssertionsTrait
         TemplatePath $received,
         ?string $message = null
     ): void {
-        $message = $message ?: 'Failed to assert TemplatePaths are equal';
+        $message ??= 'Failed to assert TemplatePaths are equal';
         if (
             $expected->getPath() !== $received->getPath()
             || $expected->getNamespace() !== $received->getNamespace()
