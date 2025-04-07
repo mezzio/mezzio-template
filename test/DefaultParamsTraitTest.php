@@ -10,7 +10,7 @@ use MezzioTest\Template\TestAsset\ArrayParameters;
 use MezzioTest\Template\TestAsset\DefaultParameters;
 use PHPUnit\Framework\TestCase;
 
-class DefaultParamsTraitTest extends TestCase
+final class DefaultParamsTraitTest extends TestCase
 {
     private ArrayParameters $arrayParams;
 
