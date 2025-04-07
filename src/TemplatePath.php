@@ -6,6 +6,7 @@ namespace Mezzio\Template;
 
 use Stringable;
 
+/** @final */
 class TemplatePath implements Stringable
 {
     public function __construct(protected string $path, protected ?string $namespace = null)

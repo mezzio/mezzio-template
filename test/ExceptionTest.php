@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 
 use function is_a;
 
-class ExceptionTest extends TestCase
+final class ExceptionTest extends TestCase
 {
     /** @psalm-return array<class-string, array<int, class-string>> */
     public static function exception(): array

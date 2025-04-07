@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MezzioTest\Template\TestAsset;
 
-class ViewModel
+final class ViewModel
 {
     private array $variables;
 

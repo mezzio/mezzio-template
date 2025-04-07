@@ -6,7 +6,7 @@ namespace MezzioTest\Template\TestAsset;
 
 use Mezzio\Template\ArrayParametersTrait;
 
-class ArrayParameters
+final class ArrayParameters
 {
     use ArrayParametersTrait;
 

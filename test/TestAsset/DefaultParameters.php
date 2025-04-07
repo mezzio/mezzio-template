@@ -6,7 +6,7 @@ namespace MezzioTest\Template\TestAsset;
 
 use Mezzio\Template\DefaultParamsTrait;
 
-class DefaultParameters
+final class DefaultParameters
 {
     use DefaultParamsTrait;
 

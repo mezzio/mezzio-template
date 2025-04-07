@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @covers Mezzio\Template\TemplatePath
  */
-class TemplatePathTest extends TestCase
+final class TemplatePathTest extends TestCase
 {
     use TemplatePathAssertionsTrait;
 
