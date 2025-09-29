@@ -10,9 +10,11 @@ final class ArrayParameters
 {
     use ArrayParametersTrait;
 
-    /** @param mixed $params */
-    public function normalize($params): array
+    /**
+     * @return array<non-empty-string, mixed>
+     */
+    public function normalize(mixed $params): array
     {
-        return $this->normalizeParams($params);
+        return $this->normalizeParamsAsMap($params);
     }
 }
