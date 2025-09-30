@@ -29,11 +29,17 @@ interface TemplateRendererInterface
      *
      * Adds a template path, with optional namespace the templates in that path
      * provide.
+     *
+     * @deprecated Since 2.12.0. Template file paths are not the concern of a template renderer in this context. The
+     *             method will be removed in 3.0.0
      */
     public function addPath(string $path, ?string $namespace = null): void;
 
     /**
      * Retrieve configured paths from the engine.
+     *
+     * @deprecated  Since 2.12.0. Template file paths are not the concern of a template renderer in this context. The
+     *              method will be removed in 3.0.0
      *
      * @return TemplatePath[]
      */

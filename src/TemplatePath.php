@@ -6,7 +6,12 @@ namespace Mezzio\Template;
 
 use Stringable;
 
-/** @final */
+/**
+ * @deprecated Since 2.12.0. This class will be removed in 3.0.0 when the relevant methods in TemplateRendererInterface
+ *             are removed.
+ *
+ * @final
+ */
 class TemplatePath implements Stringable
 {
     public function __construct(protected string $path, protected ?string $namespace = null)
