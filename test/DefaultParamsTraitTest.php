@@ -79,6 +79,7 @@ final class DefaultParamsTraitTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('$templateName must be a non-empty string');
+        /** @psalm-suppress InvalidArgument */
         $this->defaultParams->addDefaultParam('', 'name', 'value');
     }
 
@@ -86,6 +87,7 @@ final class DefaultParamsTraitTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('$param must be a non-empty string');
+        /** @psalm-suppress InvalidArgument */
         $this->defaultParams->addDefaultParam('template', '', 'value');
     }
 }

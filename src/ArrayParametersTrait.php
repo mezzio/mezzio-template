@@ -6,9 +6,11 @@ namespace Mezzio\Template;
 
 use Traversable;
 
+use function assert;
 use function gettype;
 use function is_array;
 use function is_object;
+use function is_string;
 use function iterator_to_array;
 use function method_exists;
 use function sprintf;
@@ -58,7 +60,26 @@ trait ArrayParametersTrait
             '%s template adapter can only handle arrays, Traversables, and objects '
             . 'when rendering; received %s',
             static::class,
-            gettype($params)
+            gettype($params),
         ));
+    }
+
+    /**
+     * Performs parameter normalization to an array with runtime assertions that all keys are non-empty-string
+     *
+     * @return array<non-empty-string, mixed>
+     * @throws Exception\InvalidArgumentException
+     * @psalm-suppress MixedAssignment
+     */
+    private function normalizeParamsAsMap(mixed $params): array
+    {
+        $params = $this->normalizeParams($params);
+        $map    = [];
+        foreach ($params as $key => $value) {
+            assert(is_string($key) && $key !== '');
+            $map[$key] = $value;
+        }
+
+        return $map;
     }
 }

@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="6.13.1@1e3b7f0a8ab32b23197b91107adc0a7ed8a05b51">
   <file src="src/TemplateRendererInterface.php">
-    <DeprecatedClass>
-      <code><![CDATA[TemplatePath[]]]></code>
-    </DeprecatedClass>
     <PossiblyUnusedMethod>
       <code><![CDATA[addDefaultParam]]></code>
-      <code><![CDATA[addPath]]></code>
-      <code><![CDATA[getPaths]]></code>
       <code><![CDATA[render]]></code>
     </PossiblyUnusedMethod>
-  </file>
-  <file src="test/TemplatePathAssertionsTrait.php">
-    <DeprecatedClass>
-      <code><![CDATA[TemplatePath]]></code>
-      <code><![CDATA[TemplatePath]]></code>
-      <code><![CDATA[TemplatePath]]></code>
-      <code><![CDATA[TemplatePath]]></code>
-      <code><![CDATA[TemplatePath]]></code>
-      <code><![CDATA[TemplatePath]]></code>
-    </DeprecatedClass>
-  </file>
-  <file src="test/TemplatePathTest.php">
-    <DeprecatedClass>
-      <code><![CDATA[new TemplatePath('/tmp')]]></code>
-      <code><![CDATA[new TemplatePath('/tmp')]]></code>
-      <code><![CDATA[new TemplatePath('/tmp', 'test')]]></code>
-      <code><![CDATA[new TemplatePath('/tmp', 'test')]]></code>
-    </DeprecatedClass>
   </file>
 </files>

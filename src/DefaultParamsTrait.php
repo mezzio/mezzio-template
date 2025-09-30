@@ -11,8 +11,8 @@ use function array_replace_recursive;
  */
 trait DefaultParamsTrait
 {
-    /** @var array<string, array<string, mixed>> */
-    private $defaultParams = [];
+    /** @var array<non-empty-string, array<non-empty-string, mixed>> */
+    private array $defaultParams = [];
 
     /**
      * Add a default parameter to use with a template.
@@ -28,18 +28,20 @@ trait DefaultParamsTrait
      * If the default parameter existed previously, subsequent invocations with
      * the same template name and parameter name will overwrite.
      *
-     * @param string $templateName Name of template to which the param applies;
+     * @param non-empty-string $templateName Name of template to which the param applies;
      *     use TEMPLATE_ALL to apply to all templates.
-     * @param string $param Param name.
+     * @param non-empty-string $param Param name.
      * @throws Exception\InvalidArgumentException
      */
     public function addDefaultParam(string $templateName, string $param, mixed $value): void
     {
-        if (! $templateName) {
+        /** @psalm-suppress TypeDoesNotContainType Retaining defensive checks despite precise types */
+        if ($templateName === '') {
             throw new Exception\InvalidArgumentException('$templateName must be a non-empty string');
         }
 
-        if (! $param) {
+        /** @psalm-suppress TypeDoesNotContainType Retaining defensive checks despite precise types */
+        if ($param === '') {
             throw new Exception\InvalidArgumentException('$param must be a non-empty string');
         }
 
@@ -53,15 +55,16 @@ trait DefaultParamsTrait
     /**
      * Returns merged global, template-specific and given params
      *
-     * @template TKey of array-key
-     * @param array<TKey, mixed> $params
-     * @return array<TKey, mixed>
+     * @param non-empty-string $template
+     * @param array<non-empty-string, mixed> $params
+     * @return array<non-empty-string, mixed>
      */
     private function mergeParams(string $template, array $params): array
     {
         $globalDefaults   = $this->defaultParams[TemplateRendererInterface::TEMPLATE_ALL] ?? [];
         $templateDefaults = $this->defaultParams[$template] ?? [];
 
+        /** @psalm-var array<non-empty-string, mixed> */
         return array_replace_recursive($globalDefaults, $templateDefaults, $params);
     }
 }

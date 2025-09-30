@@ -11,8 +11,8 @@ final class DefaultParameters
     use DefaultParamsTrait;
 
     /**
-     * @param array<string, mixed> $params
-     * @return array<string, mixed>
+     * @param array<non-empty-string, mixed> $params
+     * @return array<non-empty-string, mixed>
      */
     public function mergePreservesKeyType(array $params): array
     {
