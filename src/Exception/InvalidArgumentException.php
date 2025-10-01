@@ -6,7 +6,6 @@ namespace Mezzio\Template\Exception;
 
 use InvalidArgumentException as SplInvalidArgumentException;
 
-/** @final */
-class InvalidArgumentException extends SplInvalidArgumentException implements ExceptionInterface
+final class InvalidArgumentException extends SplInvalidArgumentException implements ExceptionInterface
 {
 }

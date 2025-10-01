@@ -6,7 +6,6 @@ namespace Mezzio\Template\Exception;
 
 use DomainException;
 
-/** @final */
-class RenderingException extends DomainException implements ExceptionInterface
+final class RenderingException extends DomainException implements ExceptionInterface
 {
 }
