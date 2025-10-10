@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace MezzioTest\Template;
 
 use Mezzio\Template\TemplatePath;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers Mezzio\Template\TemplatePath
- */
+#[CoversClass(TemplatePath::class)]
 final class TemplatePathTest extends TestCase
 {
     use TemplatePathAssertionsTrait;
