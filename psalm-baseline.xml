@@ -23,6 +23,7 @@
   </file>
   <file src="test/TemplatePathTest.php">
     <DeprecatedClass>
+      <code><![CDATA[TemplatePath::class]]></code>
       <code><![CDATA[new TemplatePath('/tmp')]]></code>
       <code><![CDATA[new TemplatePath('/tmp')]]></code>
       <code><![CDATA[new TemplatePath('/tmp', 'test')]]></code>
