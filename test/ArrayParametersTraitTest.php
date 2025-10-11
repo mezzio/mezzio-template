@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace MezzioTest\Template;
 
 use ArrayIterator;
+use AssertionError;
 use Mezzio\Template\Exception\InvalidArgumentException;
 use MezzioTest\Template\TestAsset\ArrayParameters;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -54,8 +55,6 @@ final class ArrayParametersTraitTest extends TestCase
     /** @psalm-return array<string, array{scalar, string}> */
     public static function nonNullScalarParameters(): array
     {
-        // @codingStandardsIgnoreStart
-        //                  [scalar,       expected exception string]
         return [
             'true'       => [true,         'bool'],
             'false'      => [false,        'bool'],
@@ -65,16 +64,20 @@ final class ArrayParametersTraitTest extends TestCase
             'float'      => [1.1,          'double'],
             'string'     => ['view param', 'string'],
         ];
-        // @codingStandardsIgnoreEnd
     }
 
-    /** @param string $expectedString */
     #[DataProvider('nonNullScalarParameters')]
-    public function testNonNullScalarsRaiseAnException(mixed $scalar, $expectedString): void
+    public function testNonNullScalarsRaiseAnException(mixed $scalar, string $expectedString): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage($expectedString);
 
         $this->subject->normalize($scalar);
+    }
+
+    public function testThatListsWillCauseAssertionFailure(): void
+    {
+        $this->expectException(AssertionError::class);
+        $this->subject->normalize(['a', 'b', 'c']);
     }
 }

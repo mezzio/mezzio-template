@@ -20,30 +20,10 @@ interface TemplateRendererInterface
      * Implementations MUST support the `namespace::template` naming convention,
      * and allow omitting the filename extension.
      *
-     * @param array|object $params
+     * @param non-empty-string $name
+     * @param array<non-empty-string, mixed>|object $params
      */
-    public function render(string $name, $params = []): string;
-
-    /**
-     * Add a template path to the engine.
-     *
-     * Adds a template path, with optional namespace the templates in that path
-     * provide.
-     *
-     * @deprecated Since 2.12.0. Template file paths are not the concern of a template renderer in this context. The
-     *             method will be removed in 3.0.0
-     */
-    public function addPath(string $path, ?string $namespace = null): void;
-
-    /**
-     * Retrieve configured paths from the engine.
-     *
-     * @deprecated  Since 2.12.0. Template file paths are not the concern of a template renderer in this context. The
-     *              method will be removed in 3.0.0
-     *
-     * @return TemplatePath[]
-     */
-    public function getPaths(): array;
+    public function render(string $name, array|object $params = []): string;
 
     /**
      * Add a default parameter to use with a template.
@@ -59,9 +39,9 @@ interface TemplateRendererInterface
      * If the default parameter existed previously, subsequent invocations with
      * the same template name and parameter name will overwrite.
      *
-     * @param string $templateName Name of template to which the param applies;
+     * @param non-empty-string $templateName Name of template to which the param applies;
      *     use TEMPLATE_ALL to apply to all templates.
-     * @param string $param Param name.
+     * @param non-empty-string $param Param name.
      */
     public function addDefaultParam(string $templateName, string $param, mixed $value): void;
 }
