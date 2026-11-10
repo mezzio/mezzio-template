@@ -19,20 +19,21 @@
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "8.2.99"
+            "php": "8.3.99"
         },
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "require": {
-        "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
+        "php": "~8.3.0 || ~8.4.0 || ~8.5.0 || ~8.6.0"
     },
     "require-dev": {
+        "laminas/internal-tooling": "^1.0.0",
         "laminas/laminas-coding-standard": "~3.1.0",
-        "phpunit/phpunit": "^11.5.42",
-        "psalm/plugin-phpunit": "^0.22.0",
-        "vimeo/psalm": "^6.13.1"
+        "phpunit/phpunit": "^11.5.57",
+        "psalm/plugin-phpunit": "^0.22.2",
+        "vimeo/psalm": "^6.20.10"
     },
     "suggest": {
         "mezzio/mezzio-laminasviewrenderer": "^2.0 to use the laminas-view PhpRenderer template renderer",
